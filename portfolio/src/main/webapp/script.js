@@ -15,7 +15,7 @@
 /**
  * Adds a random greeting to the page.
  */
-function addRandomGreeting() {
+async function addRandomGreeting() {
   const responseFromServer = await fetch('/hello');
   const textFromResponse = await responseFromServer.text();
   const greetings =
