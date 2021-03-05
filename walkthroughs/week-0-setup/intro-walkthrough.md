@@ -7,8 +7,6 @@ You can return to this walkthrough anytime by executing this command:
 
 ```bash
 teachme ~/software-product-sprint/walkthroughs/week-0-setup/intro-walkthrough.md
-``````bash
-teachme ~/software-product-sprint/walkthroughs/week-0-setup/intro-walkthrough.md
 ```
 
 Let's get started!
