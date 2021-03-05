@@ -16,6 +16,8 @@
  * Adds a random greeting to the page.
  */
 function addRandomGreeting() {
+    const responseFromServer = await fetch('/date');
+  const textFromResponse = await responseFromServer.text();
   const greetings =
       ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
 
