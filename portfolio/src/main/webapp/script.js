@@ -17,7 +17,18 @@
  */
 async function addRandomGreeting() {
   const responseFromServer = await fetch('/hello');
-  const textFromResponse = await responseFromServer.json();x
+  const textFromResponse = await responseFromServer.json();
+  const greetingContainer = document.getElementById('greeting-container');
+  //const listText = createListElement(textFromResponse);
+  const randomGreeting = textFromResponse[Math.floor(Math.random() * textFromResponse.length)];
+  greetingContainer.innerText = randomGreeting;
+
+
+
+
+
+  console.log(randomGreeting);
+
   /*const greetings =
       ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
 
@@ -25,10 +36,13 @@ async function addRandomGreeting() {
   const greeting = greetings[Math.floor(Math.random() * greetings.length)];*/
 
   // Add it to the page.
-  const randomGreeting = textFromResponse[Math.floor(Math.random() * greetings.length)];
-  const greetingContainer = document.getElementById('greeting-container');
   //greetingContainer.innerText = randomGreeting;
-  greetingContainer.innerText = textFromResponse;
 
+}
+
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return randomGreeting;
 }
 
