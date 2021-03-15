@@ -23,10 +23,6 @@ async function addRandomGreeting() {
   const randomGreeting = textFromResponse[Math.floor(Math.random() * textFromResponse.length)];
   greetingContainer.innerText = randomGreeting;
 
-
-
-
-
   console.log(randomGreeting);
 
   /*const greetings =
@@ -45,4 +41,10 @@ function createListElement(text) {
   liElement.innerText = text;
   return randomGreeting;
 }
+function createMap() {
+  const map = new google.maps.Map(
+      document.getElementById('map'),
+      {center: {lat:41.6613, lng: -91.5362}, zoom: 16});
+}
+
 
